@@ -64,7 +64,7 @@ function BookmarkApp() {
     <div>
       <h1>Bookmark Manager</h1>
       <div id="add-bookmark-form">
-        <input type="text" id="new-title" value={newTitle} onChange={handleTitleChange} placeholder="Bookmark title"/>
+        <input type="text" id="new-title" value={newTitle} onChange={handleTitleChange} placeholder="Bookmark title" />
         <input type="text" id="new-link" value={newLink} onChange={handleLinkChange} placeholder="Bookmark link" />
         <button id="add-btn" onClick={addNewBookmark}>Add Bookmark</button>
       </div>
@@ -76,10 +76,10 @@ function BookmarkApp() {
               <a href={bookmark.link} target="_blank">{bookmark.title}</a>
               <span className="span-btns" > <span id={bookmark.id} title="delete" onClick={() => deleteBookmark(bookmark.id)} > X </span></span>
             </li>
-          ))):
-          ( 
-          <li>No bookmarks found</li>
-            )}
+          ))) :
+          (
+            <li>No bookmarks found</li>
+          )}
       </ul>
     </div>
   );
